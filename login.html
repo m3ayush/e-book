@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShelfSpace</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <div class="form-container">
+                <div class="welcome">
+                    <h2>WELCOME TO ShelfSpace!!</h2>
+                    <p>A Place Where Your Search Is Over.</p>
+                </div>
+                <form id="login-form" action="#">
+                    <div class="input-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" placeholder="Enter your username" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Enter your password" required>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="remember-me">
+                        <label for="remember-me">Remember me</label>
+                        <!-- <p>Don't Have an account <a href="./register.html">Sign UP</a></p> -->
+                    </div>
+                    <div class="button-container">
+                        <button type="submit" class="login-button">Login</button>
+                    </div>
+                    <div class="login-section">
+                        <p>Dont't have an account? <a href="./register.html">Sign Up</a></p>
+                    </div>
+                </form>
+            </div>
+            <div class="logo">
+                <img src="./images/logo.webp" alt="logo">
+            </div>
+        </div>
+    </div>
+    
+<!-- JAVA SCRIPT  -->
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            if (username.trim() !== '' && password.trim() !== '') {
+                window.location.href = 'index.html';
+            } else {
+                alert('Please fill in both username and password.');
+            }
+        });
+    </script>
+</body>
+</html>
